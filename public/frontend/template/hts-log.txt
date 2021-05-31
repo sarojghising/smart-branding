@@ -1,0 +1,14 @@
+HTTrack3.49-2 launched on Thu, 27 May 2021 15:54:18 at https://templates.hibootstrap.com/dilx/default/digital.html
+(httrack https://templates.hibootstrap.com/dilx/default/digital.html )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+15:57:41	Error: 	"Not Found" (404) at link https://templates.hibootstrap.com/dilx/default/terms-condiitons.html (from https://templates.hibootstrap.com/dilx/default/digital.html)
+15:57:41	Error: 	"Not Found" (404) at link https://templates.hibootstrap.com/dilx/default/conatct.html (from https://templates.hibootstrap.com/dilx/default/digital.html)
+15:57:41	Error: 	"Not Found" (404) at link https://templates.hibootstrap.com/dilx/default/assets/css/owl.video.play.png (from https://templates.hibootstrap.com/dilx/default/assets/css/owl.carousel.min.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 3 minutes 23 seconds : 203 links scanned, 199 files written (13125162 bytes overall) [11475649 bytes received at 56530 bytes/sec], 2615040 bytes transferred using HTTP compression in 58 files, ratio 29%, 29.0 requests per connection
+(3 errors, 0 warnings, 0 messages)
