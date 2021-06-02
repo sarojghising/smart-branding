@@ -26,29 +26,36 @@
                 </div>
             </li>
             <li class="{{ request()->routeIs('brand.campaigns.index') ? 'active' : '' }}">
-                <a href="{{ route('brand.campaigns.index') }}"><i class="fa fa-home"></i> <span class="nav-label">My Campaigns</span></a>
+                <a href="{{ route('brand.campaigns.index') }}"><i class="fa fa-home"></i> <span class="nav-label">My
+                        Campaigns</span></a>
             </li>
 
-            <li class="">
-                <a href=""><i class="fa fa-home"></i> <span class="nav-label">Category</span></a>
+            <li class="{{ request()->routeIs('brand.categories.index') ? 'active' : '' }}">
+                <a href="{{ route('brand.categories.index') }}"><i class="fa fa-shopping-cart"></i> <span
+                        class="nav-label">Category</span></a>
             </li>
 
-            <li class="">
-                <a href=""><i class="fa fa-home"></i> <span class="nav-label">Product Services</span></a>
-            </li>
-
-            <li class="">
-                <a href=""><i class="fa fa-home"></i> <span class="nav-label">Target Audience</span></a>
+            <li class="{{ request()->routeIs('brand.products.create') ? 'active' : '' }}">
+                <a href="{{ route('brand.products.create') }}"><i class="fa fa-home"></i> <span class="nav-label">Product Services</span></a>
             </li>
 
 
-            <li class="">
-                <a href=""><i class="fa fa-home"></i> <span class="nav-label">Post Selection</span></a>
+            <li class="{{ request()->routeIs('brand.target.audience') ? 'active' : '' }}">
+                <a href="{{ route('brand.target.audience') }}"><i class="fa fa-home"></i> <span class="nav-label">Target Audience</span></a>
             </li>
 
-            <li class="">
+
+            <li class="{{ request()->routeIs('brand.all.influencers') ? 'active' : '' }}">
+                <a href="{{ route('brand.all.influencers') }}"><i class="fa fa-home"></i> <span class="nav-label">Influencers</span></a>
+            </li>
+
+            <li class="{{ request()->routeIs('brand.post.selection.list') ? 'active' : '' }}">
+                <a href="{{ route('brand.post.selection.list') }}"><i class="fa fa-home"></i> <span class="nav-label">Post Selection</span></a>
+            </li>
+
+            {{-- <li class="">
                 <a href=""><i class="fa fa-home"></i> <span class="nav-label">Review</span></a>
-            </li>
+            </li> --}}
 
             <li>
                 <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Profiles</span><span
@@ -62,6 +69,3 @@
 
     </div>
 </nav>
-
-
-

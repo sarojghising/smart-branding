@@ -131,7 +131,7 @@ Register Brand
                             </div>
                             </form>
                             <div class="bottom mt-3 text-center">
-                                <a href="{{ route('home.page') }}" class="btn btn-secondary">Go Back</a>
+                                <a href="{{ route('login') }}" class="btn btn-secondary">Go Back</a>
                                 <p>
                                     Are You already Member?
                                     <a href="{{ route('brand.login.form') }}">Sign In</a>

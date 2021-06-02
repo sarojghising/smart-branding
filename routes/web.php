@@ -15,3 +15,5 @@ use App\Http\Controllers\Frontend\HomeController;
 */
 
 Route::get('/',[HomeController::class ,'index'])->name('home.page');
+
+Route::get('login/',[])->name('login');

@@ -16,8 +16,12 @@ class CreateInfluencersTable extends Migration
         Schema::create('influencers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('image');
+            $table->string('facebook_followers');
+            $table->string('instagram_followers');
+            $table->string('impression');
+            $table->string('rate');
             $table->string('email')->unique();
-            $table->string('mobile_no')->nullable();
             $table->timestamp('phone_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
