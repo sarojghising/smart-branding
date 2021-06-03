@@ -20,7 +20,7 @@
                         Campaign Code : #{{$review->campaign->code }} <br> <br>
                         Total Budget :  {{ ($review->no_of_post * $review->influencer->rate) }} <br> <br>
                         Number of Influencer(s) : 1 <br> <br>
-                        It is currently under review and you shall receive the notification from Uptrendly team on
+                        It is currently under review and you shall receive the notification from growBrand team on
                         campaign status within the next 2 working days.
 
 
