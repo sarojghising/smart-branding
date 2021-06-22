@@ -13,6 +13,7 @@ class PostSelection extends Model
         'influencer_id',
         'campaign_id',
         'product_service_id',
+        'brand_id',
         'campaign_cost',
         'estimated_impression',
         'cost_per_impression',
@@ -49,5 +50,17 @@ class PostSelection extends Model
     public function productService()
     {
         return $this->belongsTo(ProductService::class, 'product_service_id', 'id');
+    }
+
+
+
+    /**
+     * Get the brand that owns the PostSelection
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function brand()
+    {
+        return $this->belongsTo(Brand::class, 'brand_id', 'id');
     }
 }

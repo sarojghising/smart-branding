@@ -30,10 +30,10 @@
                         Campaigns</span></a>
             </li>
 
-            <li class="{{ request()->routeIs('brand.categories.index') ? 'active' : '' }}">
+            {{-- <li class="{{ request()->routeIs('brand.categories.index') ? 'active' : '' }}">
                 <a href="{{ route('brand.categories.index') }}"><i class="fa fa-shopping-cart"></i> <span
                         class="nav-label">Category</span></a>
-            </li>
+            </li> --}}
 
             <li class="{{ request()->routeIs('brand.products.create') ? 'active' : '' }}">
                 <a href="{{ route('brand.products.create') }}"><i class="fa fa-home"></i> <span class="nav-label">Product Services</span></a>

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Brand\Category;
+namespace App\Http\Controllers\Admin\Category;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Category\CategoryCreateRequest;
@@ -19,7 +19,7 @@ class CategoryController extends Controller
     {
         $categories = Category::latest()->orderByDesc('created_at')->get();
 
-        return  view('brand.category.index',compact('categories'));
+        return  view('admin.category.index',compact('categories'));
     }
 
     /**
@@ -29,7 +29,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('brand.category.edit-create');
+        return view('admin.category.edit-create');
     }
 
     /**
@@ -50,7 +50,7 @@ class CategoryController extends Controller
         Toastr::success('Success','Category Added Successfully') :
         Toastr::error('Error','Sorry, There was problem while adding category...');
 
-        return redirect()->route('brand.categories.index');
+        return redirect()->route('admin.categories.index');
 
 
 
@@ -77,7 +77,7 @@ class CategoryController extends Controller
     {
         $category = Category::findOrFail($id);
 
-        return  view('brand.category.edit-create',compact('category'));
+        return  view('admin.category.edit-create',compact('category'));
     }
 
     /**
@@ -101,7 +101,7 @@ class CategoryController extends Controller
         Toastr::success('Success','Category Updated Successfully') :
         Toastr::error('Error','Sorry, There was problem while updating category...');
 
-        return redirect()->route('brand.categories.index');
+        return redirect()->route('admin.categories.index');
 
     }
 
@@ -122,6 +122,6 @@ class CategoryController extends Controller
         Toastr::success('Success','Category Deleted Successfully') :
         Toastr::error('Error','Sorry, There was problem while deleting category...');
 
-        return redirect()->route('brand.categories.index');
+        return redirect()->route('admin.categories.index');
     }
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\Brand\Auth\LoginController;
 use App\Http\Controllers\Brand\Campaign\CampaignController;
 use App\Http\Controllers\Brand\Category\CategoryController;
 use App\Http\Controllers\Brand\Dashboard\DashboardController;
+use App\Http\Controllers\Brand\Payment\PaymentController;
 use App\Http\Controllers\Brand\PostSelection\InfluencerSelectionController;
 use App\Http\Controllers\Brand\PostSelection\PostSelectionController;
 use App\Http\Controllers\Brand\ProductServiceController;
@@ -20,6 +21,8 @@ use Illuminate\Support\Facades\Route;
  */
 
 
+Route::get('brand/verify/{token}', [AuthController::class, 'verifyAccount'])->name('email.verify');
+
 
 Route::group(['prefix' => 'brand', 'as' => 'brand.'], function () {
 
@@ -33,18 +36,17 @@ Route::group(['prefix' => 'brand', 'as' => 'brand.'], function () {
         Route::get('brand-login', [LoginController::class, 'brandLogin'])->name('login.form');
 
         Route::post('brand-login', [LoginController::class, 'authenticate'])->name('submit.login.form');
+
     });
 
 
-    Route::middleware('auth:brand')->group(function () {
+    Route::middleware(['auth:brand','isBrandEmailVerified'])->group(function () {
 
 
         Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
         Route::resource('campaigns', CampaignController::class);
-
-        Route::resource('categories', CategoryController::class);
 
         Route::resource('products', ProductServiceController::class);
 
@@ -66,5 +68,7 @@ Route::group(['prefix' => 'brand', 'as' => 'brand.'], function () {
 
         Route::get('/review/{id}',[ReviewController::class ,'review'])->name('list.of.review');
         Route::get('/review-submitted/{id}',[ReviewController::class ,'store'])->name('review.submitted');
+
+      
     });
 });

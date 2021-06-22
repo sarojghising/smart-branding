@@ -86,7 +86,7 @@
                                                 />
                                             </div>
                                         </div>
-                                        
+
                                         <div class="col-lg-12">
                                             <button
                                                 type="submit"
@@ -100,7 +100,7 @@
                                 <div class="bottom">
                                     <p>
                                         Are You already Member?
-                                        <a href="{{ route('influencer.login') }}"
+                                        <a href="{{ route('influencer.login.form') }}"
                                             >Sign In</a
                                         >
                                     </p>

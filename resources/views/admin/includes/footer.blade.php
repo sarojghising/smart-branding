@@ -3,6 +3,6 @@
        Admin Dashboard
     </div>
     <div>
-        <strong>Copyright</strong>  Smart Food Delivery Admin &copy; <?= date('Y') ?>
+        <strong>Copyright</strong>  Smart Branding Admin &copy; <?= date('Y') ?>
     </div>
 </div>

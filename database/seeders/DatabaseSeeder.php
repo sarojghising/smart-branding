@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $this->call(AdminUserSeeder::class);
+
          \App\Models\Influencer::factory(30)->create();
     }
 }

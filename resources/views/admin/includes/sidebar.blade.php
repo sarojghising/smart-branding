@@ -24,27 +24,16 @@
                     IN+
                 </div>
             </li>
-            <li class="{{ request()->routeIs('admin.restaurant.index') ? 'active' : '' }}">
-                <a href="{{ route('admin.restaurant.index') }}"><i class="fa fa-home"></i> <span class="nav-label">Restaurant</span></a>
+            <li class="{{ request()->routeIs('admin.categories.index') ? 'active' : '' }}">
+                <a href="{{ route('admin.categories.index') }}"><i class="fa fa-home"></i> <span class="nav-label">Category</span></a>
             </li>
-            <li class="{{ request()->routeIs('admin.category.index') ? 'active' : '' }}">
-                <a href="{{ route('admin.category.index') }}"><i class="fa fa-calendar-minus-o"></i> <span class="nav-label">Categories</span></a>
+            <li class="{{ request()->routeIs('admin.products.list') ? 'active' : '' }}">
+                <a href="{{ route('admin.products.list') }}"><i class="fa fa-home"></i> <span class="nav-label">Products</span></a>
             </li>
-            <li class="{{ request()->routeIs('admin.menuItem.index') ? 'active' : '' }}">
-                <a href="{{ route('admin.menuItem.index') }}"><i class="fa fa-shopping-cart"></i> <span class="nav-label">MenuItems</span></a>
+            <li class="{{ request()->routeIs('admin.brands.all') ? 'active' : '' }}">
+                <a href="{{ route('admin.brands.all') }}"><i class="fa fa-home"></i> <span class="nav-label">Brands</span></a>
             </li>
-            <li class="{{ request()->routeIs('admin.order.list') ? 'active' : '' }}">
-                <a href="{{ route("admin.order.list") }}"><i class="fa fa-first-order"></i> <span class="nav-label">Orders</span></a>
-            </li>
-            <li class="{{ request()->routeIs('admin.delivery.list') ? 'active' : '' }}">
-                <a href="{{ route('admin.delivery.list') }}"><i class="fa fa-user"></i> <span class="nav-label">Delivery</span></a>
-            </li>
-            <li class="{{ request()->routeIs('admin.user.show') ? 'active' : '' }}">
-                <a href="{{ route('admin.user.show') }}"><i class="fa fa-users"></i> <span class="nav-label">Users</span></a>
-            </li>
-            <li class="{{ request()->routeIs('admin.menuItem.review.show') ? 'active' : '' }}">
-                <a href="{{ route('admin.menuItem.review.show') }}"><i class="fa fa-user"></i> <span class="nav-label">Reviews</span></a>
-            </li>
+        
             <li>
                 <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Profiles</span><span
                         class="fa arrow"></span></a>

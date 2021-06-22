@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Brand\Payment\PaymentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\HomeController;
 
@@ -17,3 +18,15 @@ use App\Http\Controllers\Frontend\HomeController;
 Route::get('/',[HomeController::class ,'index'])->name('home.page');
 
 Route::get('login/',[])->name('login');
+
+
+/**
+ * eSewa ID: 9806800001/2/3/4/5
+  * Password: Nepal@123
+ */
+
+
+    // esewa payment integration
+    Route::get('/payment-verify',[PaymentController::class ,'verifyPayment'])->name('payment.verify');
+
+

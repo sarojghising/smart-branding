@@ -18,6 +18,7 @@ class CreatePostSelectionsTable extends Migration
             $table->foreignId('influencer_id');
             $table->foreignId('campaign_id');
             $table->foreignId('product_service_id');
+            $table->foreignId('brand_id')->nullable();
             $table->string('campaign_cost'); // rate
             $table->string('estimated_impression');
             $table->string('cost_per_impression');

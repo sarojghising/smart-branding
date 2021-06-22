@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light">
     <a class="navbar-brand" href="sass.html">
-        <img src="assets/img/logo.png" alt="Logo">
+        <img src="{{ asset('frontend/template/assets/img/logo.png') }}" alt="Logo">
     </a>
     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
         <ul class="navbar-nav">

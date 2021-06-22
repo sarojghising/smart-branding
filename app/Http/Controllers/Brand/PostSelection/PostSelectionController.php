@@ -26,8 +26,7 @@ class PostSelectionController extends Controller
     {
         $post_selections = PostSelection::with('influencer')->latest()->get();
 
-        return  view('brand.post-selection.index',compact('post_selections'));
-
+        return  view('brand.post-selection.index', compact('post_selections'));
     }
 
 
@@ -44,7 +43,7 @@ class PostSelectionController extends Controller
 
         $product_services = ProductService::latest()->get();
 
-        return view('brand.post-selection.create',compact('influencers','campaigns','product_services'));
+        return view('brand.post-selection.create', compact('influencers', 'campaigns', 'product_services'));
     }
 
 
@@ -60,9 +59,11 @@ class PostSelectionController extends Controller
 
         $data = $request->all();
 
-        $data['campaign_id'] = $request->input('campaign_id',0);
+        $data['campaign_id'] = $request->input('campaign_id', 0);
 
         $data['product_service_id'] = $request->product_service_id;
+
+        $data['brand_id'] = auth()->guard('brand')->user()->id ?? null;
 
         $influencer = Influencer::findOrFail($data['influencer_id']);
 
@@ -71,7 +72,7 @@ class PostSelectionController extends Controller
 
         $data['estimated_impression'] =  $influencer->impression;
 
-        $per =  '0.2'.' - '.$data['post_type'];
+        $per =  '0.2' . ' - ' . $data['post_type'];
 
         $data['cost_per_impression'] = $per;
 
@@ -80,12 +81,11 @@ class PostSelectionController extends Controller
 
         $post_selection ?
 
-        Toastr::success('Success','Post Selection created Successfully') :
-        Toastr::error('Error','Sorry, There was problem while selecting post...');
+            Toastr::success('Success', 'Post Selection created Successfully') :
+            Toastr::error('Error', 'Sorry, There was problem while selecting post...');
 
 
         return redirect()->route('brand.post.selection.list');
-
     }
 
     /**
@@ -101,25 +101,15 @@ class PostSelectionController extends Controller
         $post_selection = PostSelection::findOrFail($id);
 
 
-         $success =  $post_selection->delete();
+        $success =  $post_selection->delete();
 
 
-         $success ?
+        $success ?
 
-         Toastr::success('Success','Post Selection deleted Successfully') :
-         Toastr::error('Error','Sorry, There was problem while deleting post...');
-
-
-         return redirect()->route('brand.post.selection.list');
+            Toastr::success('Success', 'Post Selection deleted Successfully') :
+            Toastr::error('Error', 'Sorry, There was problem while deleting post...');
 
 
-
-
-
-
-
+        return redirect()->route('brand.post.selection.list');
     }
-
-
-
 }

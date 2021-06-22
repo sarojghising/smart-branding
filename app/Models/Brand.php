@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -27,6 +28,9 @@ class Brand extends Authenticatable
         'mobile_no',
         'email',
         'password',
+        'is_email_verified',
+        'remember_token',
+        'email_verified_at'
     ];
 
     /**
@@ -36,7 +40,18 @@ class Brand extends Authenticatable
      */
     protected $hidden = [
         'password',
-        'remember_token',
+
+    ];
+
+     /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+        'is_email_verified' => 'boolean'
+
     ];
 
 
