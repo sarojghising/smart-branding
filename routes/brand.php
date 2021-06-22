@@ -6,6 +6,7 @@ use App\Http\Controllers\Brand\Auth\LoginController;
 use App\Http\Controllers\Brand\Campaign\CampaignController;
 use App\Http\Controllers\Brand\Category\CategoryController;
 use App\Http\Controllers\Brand\Dashboard\DashboardController;
+use App\Http\Controllers\Brand\Payment\ESewaPaymentController;
 use App\Http\Controllers\Brand\PostSelection\InfluencerSelectionController;
 use App\Http\Controllers\Brand\PostSelection\PostSelectionController;
 use App\Http\Controllers\Brand\ProductServiceController;
