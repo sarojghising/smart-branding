@@ -53,6 +53,7 @@
                             <thead>
                                 <tr>
                                     <th>S.NO.</th>
+                                    <th>Brand Name</th>
                                     <th>Title</th>
                                     <th>Description</th>
                                     <th>Category</th>
@@ -68,6 +69,9 @@
 
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
+                                    <td>
+                                        {{ $product->brand->brand_name ?? 'no brand' }}
+                                    </td>
                                     <td>
                                         {{  $product->title }}
                                     </td>

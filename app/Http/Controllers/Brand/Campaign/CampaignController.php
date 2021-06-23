@@ -7,9 +7,11 @@ use App\Http\Requests\Campaign\CampaignCreateRequest;
 use App\Models\Campaign;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CampaignController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -17,9 +19,10 @@ class CampaignController extends Controller
      */
     public function index()
     {
-        $campaigns = Campaign::latest()->orderByDesc('created_at')->get();
+        
+        $campaigns = Campaign::where('brand_id', auth()->guard('brand')->user()->id)->latest()->orderByDesc('created_at')->get();
 
-        return  view('brand.campaign.index',compact('campaigns'));
+        return  view('brand.campaign.index', compact('campaigns'));
     }
 
     /**
@@ -43,17 +46,17 @@ class CampaignController extends Controller
 
         $data = $request->all();
 
-        $success = Campaign::create($data);
+        $success = Campaign::create(
+            $request->only(['title', 'code', 'description', 'start_date', 'end_date'])
+            +['brand_id' => auth()->guard('brand')->user()->id ?? null]
+        );
 
-         $success ?
+        $success ?
 
-        Toastr::success('Success','Campaign Added Successfully') :
-        Toastr::error('Error','Sorry, There was problem while adding campaign...');
+            Toastr::success('Success', 'Campaign Added Successfully') :
+            Toastr::error('Error', 'Sorry, There was problem while adding campaign...');
 
         return redirect()->route('brand.campaigns.index');
-
-
-
     }
 
     /**
@@ -77,7 +80,7 @@ class CampaignController extends Controller
     {
         $campaign = Campaign::findOrFail($id);
 
-        return  view('brand.campaign.edit-create',compact('campaign'));
+        return  view('brand.campaign.edit-create', compact('campaign'));
     }
 
     /**
@@ -96,13 +99,12 @@ class CampaignController extends Controller
 
         $success =  $campaign->update($data);
 
-         $success ?
+        $success ?
 
-        Toastr::success('Success','Campaign Updated Successfully') :
-        Toastr::error('Error','Sorry, There was problem while updating campaign...');
+            Toastr::success('Success', 'Campaign Updated Successfully') :
+            Toastr::error('Error', 'Sorry, There was problem while updating campaign...');
 
         return redirect()->route('brand.campaigns.index');
-
     }
 
     /**
@@ -117,10 +119,10 @@ class CampaignController extends Controller
 
         $success = $campaign->delete();
 
-         $success ?
+        $success ?
 
-        Toastr::success('Success','Campaign Deleted Successfully') :
-        Toastr::error('Error','Sorry, There was problem while deleting campaign...');
+            Toastr::success('Success', 'Campaign Deleted Successfully') :
+            Toastr::error('Error', 'Sorry, There was problem while deleting campaign...');
 
         return redirect()->route('brand.campaigns.index');
     }

@@ -21,6 +21,7 @@ class CreateReviewsTable extends Migration
             $table->foreignId('influencer_id')->nullable();
             $table->integer('qty')->nullable();
             $table->string('amount')->nullable();
+            $table->foreignId('brand_id')->nullable();
             $table->timestamps();
         });
     }

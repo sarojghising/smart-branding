@@ -30,7 +30,7 @@ class ProductServiceController extends Controller
     public function create()
     {
         $categories = Category::latest()->orderByDesc('created_at')->get();
-        return view('brand.product._edit-create',compact('categories'));
+        return view('brand.product._edit-create', compact('categories'));
     }
 
     /**
@@ -45,30 +45,38 @@ class ProductServiceController extends Controller
 
         if ($data['video_link'] == null ||  !isset($data['image'])) {
 
-              $success = ProductService::create($data);
+            $success = ProductService::create(
+                $request->only([
+                    'category_id',
+                    'title',
+                    'description',
+                    'video_url',
+                    'image'
+                ])
+                    + ['brand_id' => auth()->guard('brand')->user()->id ?? null]
+            );
 
-              $success ?
+            $success ?
 
-             Toastr::success('Success','Product Added Successfully') :
-             Toastr::error('Error','Sorry, There was problem while adding product...');
+                Toastr::success('Success', 'Product Added Successfully') :
+                Toastr::error('Error', 'Sorry, There was problem while adding product...');
 
-             return redirect()->back();
+            return redirect()->back();
         }
 
 
-      $data['image'] =  $this->uploadImage($data['image'],'product','/app/public/images/product/');
+        $data['image'] =  $this->uploadImage($data['image'], 'product', '/app/public/images/product/');
 
-      $data['video_link'] = $data['video_link'] ?? null;
+        $data['video_link'] = $data['video_link'] ?? null;
 
-      $success = ProductService::create($data);
+        $success = ProductService::create($data);
 
-         $success ?
+        $success ?
 
-        Toastr::success('Success','Product Added Successfully') :
-        Toastr::error('Error','Sorry, There was problem while adding product...');
+            Toastr::success('Success', 'Product Added Successfully') :
+            Toastr::error('Error', 'Sorry, There was problem while adding product...');
 
         return redirect()->back();
-
     }
 
     /**
@@ -115,7 +123,7 @@ class ProductServiceController extends Controller
     {
         //
     }
-      /**
+    /**
      * @param $image
      * @param $imageFieldName
      * @param $path
@@ -131,5 +139,4 @@ class ProductServiceController extends Controller
 
         return $filename;
     }
-
 }

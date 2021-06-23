@@ -10,7 +10,7 @@ class Payment extends Model
     use HasFactory;
 
 
-    protected $fillable = ['payment_method','payment_amount','post_section_id','brand_id'];
+    protected $fillable = ['payment_method','payment_amount','post_selection_id','brand_id'];
 
 
     /**

@@ -61,6 +61,8 @@
                                 <th>ESTIMATED IMPRESSION</th>
                                 <th>Influencer</th>
                                 <th>Impression</th>
+                                <th>Payment method</th>
+                                <th>Payment Amount</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -93,16 +95,38 @@
                                      {{ $value->influencer->impression }}
                                  </td>
                                  <td>
-
+                                      @if ($value->payment)
+                                      {{ $value->payment->payment_method ?? '' }} 
+                                      @else
+                                       eSewa
+                                      @endif
+                                     
+                                 </td>
+                                
+                                 <td>
+                                    @if ($value->payment)
+                                    {{ number_format($value->payment->payment_amount,2) ?? '' }}
+                                    @else
+                                    no payment was done.
+                                    @endif
+                                     
+                                   
+                                </td>
+                                 <td>
                                          <a href="{{ route('admin.notify.brand' , $brand->id) }}"
                                              onclick="return confirm('Are u sure want to notify brand ? ')"
                                              class="btn btn-info">notify Brand</a>
-                                             <a href="{{ route('admin.rejected.brand', $brand->id) }}"
-                                                onclick="return confirm('Are u sure want to rejected brand ? ')"
-                                                class="btn btn-danger mt-2">rejected Brand</a>
+                                             <form action="{{ route('admin.post-selection.delete',$value->id) }}" method="post"
+                                                onsubmit="return confirm('Are you sure?')" class="mt-2">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger btn-sm"><i
+                                                        class="fa fa-trash"></i></button>
+                                            </form>
+
 
                                  </td>
-
+ 
                              </tr>
                              @endforeach
 
@@ -119,6 +143,8 @@
                                 <th>ESTIMATED IMPRESSION</th>
                                 <th>Influencer</th>
                                 <th>Impression</th>
+                                <th>Payment method</th>
+                                <th>Payment Amount</th>
                                 <th>Action</th>
                             </tr>
                         </tfoot>

@@ -63,4 +63,15 @@ class PostSelection extends Model
     {
         return $this->belongsTo(Brand::class, 'brand_id', 'id');
     }
+
+
+    /**
+     * Get the payment associated with the PostSelection
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function payment()
+    {
+        return $this->hasOne(Payment::class, 'post_selection_id', 'id');
+    }
 }

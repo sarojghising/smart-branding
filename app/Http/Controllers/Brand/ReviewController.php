@@ -10,6 +10,7 @@ class ReviewController extends Controller
 {
     public function review($id)
     {
+        
 
         $review = PostSelection::with(['influencer','campaign','productService'])->findOrFail($id);
 
@@ -18,8 +19,8 @@ class ReviewController extends Controller
 
     public function store($id)
     {
-        $review = PostSelection::with(['influencer','campaign','productService'])->findOrFail($id);
+        $post_selection = PostSelection::with(['influencer','campaign','productService'])->findOrFail($id);
 
-        return view('brand.review.Campaign_submitted',compact('review'));
+        return view('brand.review.Campaign_submitted',compact('post_selection'));
     }
 }

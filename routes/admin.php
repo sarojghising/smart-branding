@@ -73,7 +73,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
 
         Route::get('/notify-brand/{id}',[BrandController::class ,'notifyBrand'])->name('notify.brand');
-        Route::get('/rejected-brand/{id}',[BrandController::class ,'rejectedBrand'])->name('rejected.brand');
+        Route::delete('/delete-post-selection/{id}',[BrandController::class ,'deletePostSelection'])->name('post-selection.delete');
 
 
 

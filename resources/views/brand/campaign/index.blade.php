@@ -64,7 +64,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @isset($campaigns)
+                                @if($campaigns)
 
                                  @foreach ($campaigns as $key => $campaign)
 
@@ -102,7 +102,10 @@
 
                                  @endforeach
 
-                                @endisset
+                                 @else
+                                  <div class="alert alert-danger">No campaign was create by this brand....</div>
+                                @endif
+
                             </tbody>
                             <tfoot>
                                 <tr>

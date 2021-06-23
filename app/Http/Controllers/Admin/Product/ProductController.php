@@ -11,13 +11,11 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = ProductService::with('category')->latest()->orderByDesc('created_at','id')->get();
+        $products = ProductService::with(['category','brand'])->latest()->orderByDesc('created_at','id')->get();
 
         return view('admin.product.index',compact('products'));
 
     }
-
-
     
     public function destroy($id)
     {

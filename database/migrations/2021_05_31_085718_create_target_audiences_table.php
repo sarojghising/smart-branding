@@ -21,6 +21,7 @@ class CreateTargetAudiencesTable extends Migration
             $table->string('average_engagement_per_post');
             $table->string('average_views_per_video_post');
             $table->string('locations');
+            $table->foreignId('brand_id')->nullable();
             $table->string('posting_time');
             $table->timestamps();
         });

@@ -19,6 +19,7 @@ class CreateProductServicesTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('video_link')->nullable();
+            $table->foreignId('brand_id')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
         });

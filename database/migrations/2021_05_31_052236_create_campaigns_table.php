@@ -20,6 +20,7 @@ class CreateCampaignsTable extends Migration
             $table->text('description');
             $table->string('start_date');
             $table->string('end_date');
+            $table->foreignId('brand_id')->nullable();
             $table->timestamps();
         });
     }
