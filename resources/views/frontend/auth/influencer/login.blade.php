@@ -26,7 +26,8 @@
                                     </a> --}}
                                     <h2>Influencer Sign In</h2>
                                 </div>
-                                <form>
+                                <form action="{{ route('influencer.submit.login.form') }}" method="POST">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="form-group">
@@ -34,6 +35,7 @@
                                                     type="email"
                                                     class="form-control"
                                                     placeholder="Enter your email"
+                                                    name="email"
                                                 />
                                             </div>
                                         </div>
@@ -43,6 +45,7 @@
                                                     type="password"
                                                     class="form-control"
                                                     placeholder="Enter your password"
+                                                    name="password"
                                                 />
                                             </div>
                                         </div>
@@ -59,7 +62,7 @@
                                 <div class="bottom">
                                     <p>
                                         Are You New Member?
-                                        <a href={{ route('influencer.login') }}
+                                        <a href={{ route('influencer.register.form') }}
                                             >Sign Up</a
                                         >
                                  

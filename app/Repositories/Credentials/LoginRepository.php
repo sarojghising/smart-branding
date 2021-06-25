@@ -119,8 +119,11 @@ class LoginRepository implements LoginInterface
      */
     public function sendFailedLoginResponse()
     {
-        if ($this->getGuards() == 'brand')  return redirect()->route('brand.login.form')->with('error', 'Invalid Credentials');
-
+        if ($this->getGuards() == 'brand') {
+            return redirect()->route('brand.login.form')->with('error', 'Invalid Credentials');
+        } elseif ($this->getGuards() == 'influencer') {
+            return redirect()->route('influencer.login.form')->with('error', 'Invalid Credentials');
+        }
         return redirect()->route('admin.login.form')->with('error', 'Invalid Credentials');
     }
 
