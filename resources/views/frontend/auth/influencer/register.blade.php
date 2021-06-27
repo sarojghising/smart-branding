@@ -25,8 +25,10 @@
                                         />
                                     </a> --}}
                                     <h2>Influencer Register</h2>
+                                    @include('notification.flashMessage')
                                 </div>
-                                <form>
+                                <form action="{{ route('influencer.register.form.submit') }}" method="POST">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="form-group">
@@ -34,19 +36,13 @@
 
                                                     type="name"
                                                     class="form-control"
-                                                    placeholder="Enter your First Name"
+                                                    placeholder="Enter your FullName"
+                                                    name="name"
                                                 />
                                             </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="form-group">
-                                                <input
-
-                                                    type="name"
-                                                    class="form-control"
-                                                    placeholder="Enter your Last Name"
-                                                />
-                                            </div>
+                                            @error('name')
+                                            <div class="error" style="color: #c54f4f;">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="form-group">
@@ -55,8 +51,12 @@
                                                     type="url"
                                                     class="form-control"
                                                     placeholder="Enter your Facebook URL"
+                                                    name="facebook_followers"
                                                 />
                                             </div>
+                                            @error('facebook_followers')
+                                            <div class="error" style="color: #c54f4f;">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="form-group">
@@ -65,8 +65,12 @@
                                                     type="url"
                                                     class="form-control"
                                                     placeholder="Enter your Instagram URL"
+                                                    name="instagram_followers"
                                                 />
                                             </div>
+                                            @error('instagram_followers')
+                                            <div class="error" style="color: #c54f4f;">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="form-group">
@@ -74,8 +78,14 @@
                                                     type="email"
                                                     class="form-control"
                                                     placeholder="Enter your Email"
+                                                    name="email"
                                                 />
                                             </div>
+
+                                            @error('email')
+                                            <div class="error" style="color: #c54f4f;">{{ $message }}</div>
+                                            @enderror
+                                            
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="form-group">
@@ -83,8 +93,12 @@
                                                     type="password"
                                                     class="form-control"
                                                     placeholder="Enter your password"
+                                                    name="password"
                                                 />
                                             </div>
+                                            @error('password')
+                                            <div class="error" style="color: #c54f4f;">{{ $message }}</div>
+                                            @enderror
                                         </div>
 
                                         <div class="col-lg-12">

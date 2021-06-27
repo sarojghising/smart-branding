@@ -14,6 +14,9 @@
     <link href="{{ asset('dashboard/css/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('dashboard/css/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+    <style>
+        
+    </style>
     @yield('styles')
 
 </head>

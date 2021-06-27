@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-md navbar-light">
-    <a class="navbar-brand" href="sass.html">
-        <img src="{{ asset('frontend/template/assets/img/logo.png') }}" alt="Logo">
+    <a class="navbar-brand" href="{{ route('home.page') }}">
+        <img src="{{ asset('frontend/template/assets/img/a.png') }}" alt="Logo" style="width: 25%;"> 
     </a>
     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-        <ul class="navbar-nav">
+        {{-- <ul class="navbar-nav">
             <li class="nav-item">
                 <a href="#" class="nav-link dropdown-toggle active">Home <i
                         class='bx bx-chevron-down'></i></a>
@@ -105,8 +105,8 @@
             <li class="nav-item">
                 <a href="contact.html" class="nav-link">Contact</a>
             </li>
-        </ul>
-        <div class="side-nav">
+        </ul> --}}
+        <div class="side-nav float-right">
             <a class="left-btn" href="{{ route('brand.register.form') }}">
                 <i class='bx bx-log-out'></i>
                 I'm  Brand

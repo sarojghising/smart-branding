@@ -128,183 +128,18 @@ Influencer Marketing
     </div>
 </div>
 
-
-
-
-
-<div class="support-area">
-    <div class="container">
-        <div class="support-item">
-            <h3>Over <span>150.000</span>Supporter all over the world</h3>
-            <div class="support-slider owl-theme owl-carousel">
-                <div class="support-inner">
-                    <img src="{{ asset('frontend/template/assets/img/digital/support1.png') }}" alt="Support">
-                </div>
-                <div class="support-inner">
-                    <img src="{{ asset('frontend/template/assets/img/digital/support2.png') }}" alt="Support">
-                </div>
-                <div class="support-inner">
-                    <img src="{{ asset('frontend/template/assets/img/digital/support3.png') }}" alt="Support">
-                </div>
-                <div class="support-inner">
-                    <img src="{{ asset('frontend/template/assets/img/digital/support4.png') }}" alt="Support">
-                </div>
-                <div class="support-inner">
-                    <img src="{{ asset('frontend/template/assets/img/digital/support5.png') }}" alt="Support">
-                </div>
-                <div class="support-inner">
-                    <img src="{{ asset('frontend/template/assets/img/digital/support6.png') }}" alt="Support">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<section class="service-area four pt-100 pb-70">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-5">
-                <div class="service-content">
-                    <div class="section-title three">
-                        <span class="sub-title">Our Services</span>
-                        <h2>Pair expertise with advanced technology</h2>
-                        <p>Our team blends experience from leaders in product, engineering, and content creation.
-                            Brought together by a shared passion for building the best content marketplace.
-
-                        </p>
-                    </div>
-                    <a href="#" class="cmn-btn">
-                        Explore More
-                        <i class='bx bx-plus'></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-7">
-                <div class="row">
-                    <div class="col-sm-6 col-lg-6">
-                        <div class="service-inner">
-                            <i class="flaticon-laptop-2"></i>
-                            <h3><a href="service-details.html">Start your sales from day one</a></h3>
-                            <p>Give your campaign a boost with the help of our best-in-class platform and team of
-                                experts
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-6">
-                        <div class="service-inner">
-                            <i class="flaticon-info"></i>
-                            <h3><a href="service-details.html">Scale your program like a pro</a></h3>
-                            <p>Using our automated step-by-step workflow that adapts to your needs, you can streamline
-                                each step of your campaign.Influencer</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-6">
-                        <div class="service-inner">
-                            <i class="flaticon-pie-chart"></i>
-                            <h3><a href="service-details.html">Advanced Analytics</a></h3>
-                            <p>We listen to our clients to craft a strategy that matches their goals, budgets and
-                                timelines.
-                                Clear, practical action steps to build their business.</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-6">
-                        <div class="service-inner">
-                            <i class="flaticon-earth-day"></i>
-                            <h3><a href="service-details.html">Create brand-safe content</a></h3>
-                            <p>Discover well-aligned influencers who create authentic content
-                                to protect your brand from fraud.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<div class="portfolio-area ptb-100">
-    <div class="container">
-        <div class="section-title three">
-            <h2>We Are Glad With Our Awesome Portfolio</h2>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="portfolio-slider owl-theme owl-carousel">
-            <div class="portfolio-item">
-                <img src="{{ asset('frontend/template/assets/img/digital/portfolio1.jpg') }}" alt="Portfolio">
-                <div class="portfolio-inner">
-                    <span>SEO</span>
-                    <h3>
-                        <a href="project-details.html">1000 Bulk Email Collection For Multiple Companies</a>
-                    </h3>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <img src="{{ asset('frontend/template/assets/img/digital/portfolio2.jpg') }}" alt="Portfolio">
-                <div class="portfolio-inner">
-                    <span>Web Design</span>
-                    <h3>
-                        <a href="project-details.html">We Designed A Creative Website For Your Company</a>
-                    </h3>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <img src="{{ asset('frontend/template/assets/img/digital/portfolio3.jpg') }}" alt="Portfolio">
-                <div class="portfolio-inner">
-                    <span>Web Development</span>
-                    <h3>
-                        <a href="project-details.html">We Developed A Creative Website For China Company</a>
-                    </h3>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <img src="{{ asset('frontend/template/assets/img/digital/portfolio4.jpg') }}" alt="Portfolio">
-                <div class="portfolio-inner">
-                    <span>UX/UI</span>
-                    <h3>
-                        <a href="project-details.html">We Made A Creative Website For USA Company</a>
-                    </h3>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <img src="{{ asset('frontend/template/assets/img/digital/portfolio5.jpg') }}" alt="Portfolio">
-                <div class="portfolio-inner">
-                    <span>Data Entry</span>
-                    <h3>
-                        <a href="project-details.html">We Are Very Careful To Keep Your Data Safe</a>
-                    </h3>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <img src="{{ asset('frontend/template/assets/img/digital/portfolio6.jpg') }}" alt="Portfolio">
-                <div class="portfolio-inner">
-                    <span>SEO</span>
-                    <h3>
-                        <a href="project-details.html">1000 Bulk Email Collection For Multiple Companies</a>
-                    </h3>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-contact">
-            <p>We're Taking New Project <a href="contact.html">Contact Us</a></p>
-        </div>
-    </div>
-</div>
-
-
 <section class="team-area-two pt-100 pb-70">
     <div class="container">
         <div class="section-title three">
             <span class="sub-title">Our Influencers</span>
-            <h2>Better Content Creation</h2>
+            <h2>WHAT OUR Partners Say?</h2>
             <p>We will create content for the promotion of the video according to campaign </p>
         </div>
         <div class="row">
             <div class="col-sm-6 col-lg-3">
                 <div class="team-item">
                     <div class="top">
-                        <img src="{{ asset('frontend/template/assets/img/digital/team1.jpg') }}" alt="Team">
+                        <img src="https://ouradmin.uptrendly.com/assets/uploads/images/testimonials/d9604-1556184589.jpg" alt="Team">
                         <ul class="team-social">
                             <li>
                                 <a href="#" target="_blank">
@@ -334,15 +169,15 @@ Influencer Marketing
                         </div>
                     </div>
                     <div class="bottom">
-                        <h3>Ralph Lauren</h3>
-                        <span>Youtuber</span>
+                        <h3>Malvika Subba</h3>
+                        <span>Miss Nepal 2002</span>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-3">
                 <div class="team-item two">
                     <div class="top">
-                        <img src="{{ asset('frontend/template/assets/img/digital/team2.jpg') }}" alt="Team">
+                        <img src="https://ouradmin.uptrendly.com/assets/uploads/images/testimonials/bdfcd-1556184901.jpg" alt="Team">
                         <ul class="team-social">
                             <li>
                                 <a href="#" target="_blank">
@@ -372,15 +207,15 @@ Influencer Marketing
                         </div>
                     </div>
                     <div class="bottom">
-                        <h3>Jermin Jekson</h3>
-                        <span>Actor</span>
+                        <h3> Sadichha Shrestha </h3>
+                        <span>Miss Nepal  2010</span>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-3">
                 <div class="team-item three">
                     <div class="top">
-                        <img src="{{ asset('frontend/template/assets/img/digital/team3.jpg') }}" alt="Team">
+                        <img src="https://ouradmin.uptrendly.com/assets/uploads/images/testimonials/c5101-106665788_643224582948230_3524481197216270779_n.jpg" alt="Team">
                         <ul class="team-social">
                             <li>
                                 <a href="#" target="_blank">
@@ -410,15 +245,15 @@ Influencer Marketing
                         </div>
                     </div>
                     <div class="bottom">
-                        <h3>Olfard Zain</h3>
-                        <span>Musician</span>
+                        <h3>Nikesh Shrestha</h3>
+                        <span>Brand Manager of Karmacharya Group</span>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-3">
                 <div class="team-item four">
                     <div class="top">
-                        <img src="{{ asset('frontend/template/assets/img/digital/team4.jpg') }}" alt="Team">
+                        <img src="https://ouradmin.uptrendly.com/assets/uploads/images/testimonials/ad349-21316223_10154888941457023_7406011099110747436_o.jpg" alt="Team">
                         <ul class="team-social">
                             <li>
                                 <a href="#" target="_blank">
@@ -448,8 +283,8 @@ Influencer Marketing
                         </div>
                     </div>
                     <div class="bottom">
-                        <h3>Julfiker Jeain</h3>
-                        <span>Fashion Model</span>
+                        <h3>Sijan Neupane</h3>
+                        <span>Marketing Manager of Agni Group</span>
                     </div>
                 </div>
             </div>
@@ -470,7 +305,7 @@ Influencer Marketing
     <div class="container">
         <div class="section-title three">
             <span class="sub-title">Testimonials</span>
-            <h2>Trusted From Clients</h2>
+            <h2>Trusted From Brands</h2>
         </div>
         <div class="testimonials-slider owl-theme owl-carousel">
             <div class="testimonials-item">
@@ -494,121 +329,6 @@ Influencer Marketing
 </section>
 
 
-<section class="blog-area two pt-100 pb-70">
-    <div class="container">
-        <div class="section-title three">
-            <span class="sub-title">Our News</span>
-            <h2>Our Latest Blogs</h2>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 col-lg-4">
-                <div class="blog-item blog-img-one">
-                    <ul class="top">
-                        <li>22nd July, 2020</li>
-                        <li>SEO</li>
-                    </ul>
-                    <h3>
-                        <a href="blog-details.html">Multiple Companies For Collecting Emails</a>
-                    </h3>
-                    <p>Lorem ipsum dolor sit amet consectur adipisicing elit sed do eiumod</p>
-                    <ul class="bottom">
-                        <li>
-                            <img src="{{ asset('frontend/template/assets/img/it-startup/blog1.jpg') }}" alt="Blog">
-                        </li>
-                        <li>
-                            <span>by:</span>
-                        </li>
-                        <li>
-                            <a href="#">Alex Dimanov</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="blog-item blog-img-two">
-                    <ul class="top">
-                        <li>30th May, 2020</li>
-                        <li>Design</li>
-                    </ul>
-                    <h3>
-                        <a href="blog-details.html">Top Ten Marketing Tricks And Tips</a>
-                    </h3>
-                    <p>Lorem ipsum dolor sit amet consectur adipisicing elit sed do eiumod</p>
-                    <ul class="bottom">
-                        <li>
-                            <img src="{{ asset('frontend/template/assets/img/it-startup/blog2.jpg') }}" alt="Blog">
-                        </li>
-                        <li>
-                            <span>by:</span>
-                        </li>
-                        <li>
-                            <a href="#">Tom Henry</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-6 offset-sm-3 offset-lg-0 col-lg-4">
-                <div class="blog-item blog-img-three">
-                    <ul class="top">
-                        <li>08th April, 2020</li>
-                        <li>Development</li>
-                    </ul>
-                    <h3>
-                        <a href="blog-details.html">Weekly Campiagn For University Of Linkon</a>
-                    </h3>
-                    <p>Lorem ipsum dolor sit amet consectur adipisicing elit sed do eiumod</p>
-                    <ul class="bottom">
-                        <li>
-                            <img src="{{ asset('frontend/template/assets/img/it-startup/blog3.jpg') }}" alt="Blog">
-                        </li>
-                        <li>
-                            <span>by:</span>
-                        </li>
-                        <li>
-                            <a href="#">Jac Jacson</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<div class="talk-area pt-100 pb-70">
-    <div class="talk-shape">
-        <img src="{{ asset('frontend/template/assets/img/digital/talk2.png') }}" alt="Shape">
-        <img src="{{ asset('frontend/template/assets/img/digital/talk3.png') }}" alt="Shape">
-    </div>
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="talk-img">
-                    <img src="{{ asset('frontend/template/assets/img/digital/talk-main.png') }}" alt="Laptop">
-                    <img src="{{ asset('frontend/template/assets/img/digital/talk1.png') }}" alt="Shape">
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="talk-content">
-                    <div class="section-title three">
-                        <span class="sub-title">Let's Talk</span>
-                        <h2>We’re Taking Project Get Started A Project?</h2>
-                        <p>You can create a campaign on your own or we will guide you according to your needs.
-                            Contact us and our team will guide you to make a perfect campaign for your business to
-                            gain more sales,genuine customers and brand awareness by associating with well known
-                            infleuncers.
-                        </p>
-                    </div>
-                    <a href="contact.html" class="cmn-btn">
-                        Contact Us
-                        <i class='bx bx-plus'></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <footer class="footer-area pt-100 pb-70">
     <div class="footer-shape">
@@ -619,8 +339,8 @@ Influencer Marketing
             <div class="col-sm-6 col-lg-3">
                 <div class="footer-item">
                     <div class="footer-logo">
-                        <a href="sass.html">
-                            <img src="{{ asset('frontend/template/assets/img/logo-two.png') }}" alt="Logo">
+                        <a href="{{ route('home.page') }}">
+                            <img src="{{ asset('frontend/template/assets/img/a.png') }}" alt="Logo" style="width: 25%;">
                         </a>
                         <p>Lorem ipsum dolor sit amet, consectetur adiisicing elit, sed do eiusmod tempor inc Neque
                             porro quisquam est, qui dolorem magnam aliquam quaerat luptatem.</p>
@@ -712,8 +432,8 @@ Influencer Marketing
         <div class="row">
             <div class="col-lg-6">
                 <div class="copyright-item">
-                    <p>Copyright ©2021 Dilx. Designed By <a href="https://hibootstrap.com/"
-                            target="_blank">HiBootstrap</a></p>
+                    <p>Copyright ©2021 Smart Branding. Designed By <a href="https://hibootstrap.com/"
+                            target="_blank">Gokyo Tech</a></p>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -726,7 +446,7 @@ Influencer Marketing
                         </li>
                         <li>
                             <a href="#" target="_blank">
-                                <i class='bx bxl-twitter'></i>
+                                <i class='bx bxl-linkedin'></i>
                             </a>
                         </li>
                         <li>
@@ -734,11 +454,7 @@ Influencer Marketing
                                 <i class='bx bxl-instagram'></i>
                             </a>
                         </li>
-                        <li>
-                            <a href="#" target="_blank">
-                                <i class='bx bxl-pinterest-alt'></i>
-                            </a>
-                        </li>
+                       
                         <li>
                             <a href="#" target="_blank">
                                 <i class='bx bxl-youtube'></i>

@@ -6,11 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Models\Influencer;
 use App\Repositories\Credentials\LoginRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
 
-     /**
+    /**
      * LoginController constructor.
      */
     public function __construct()
@@ -22,15 +24,33 @@ class AuthController extends Controller
      *
      * @return void
      */
-    public function influencerRegister(Request $request)
+    public function influencerRegister()
     {
 
-        if($request->method('post')) {
-
-        }
-
-
         return view('frontend.auth.influencer.register');
+    }
+
+
+    public function influencerRegisterSubmit(Request $request)
+    {
+
+        Validator::make($request->all(), [
+            'name' => 'required',
+            'instagram_followers' => 'required',
+            'facebook_followers' => 'required',
+            'email' => 'required|unique:influencers,email|email',
+            'password' => 'required|min:6'
+        ])->validate();
+
+
+
+        $successs = Influencer::create($request->only(['name', 'email', 'instagram_followers', 'facebook_followers'])
+            + ['password' => Hash::make($request->password)]);
+
+
+        return $successs ? redirect()->route('influencer.login.form')->with('success', 'Influencer registered successfully') :
+
+            redirect()->route('influencer.login.form')->with('error', 'Sorry ! Something went wrong...');
     }
 
     /**

@@ -25,6 +25,7 @@
                                         />
                                     </a> --}}
                                     <h2>Influencer Sign In</h2>
+                                    @include('notification.flashMessage')
                                 </div>
                                 <form action="{{ route('influencer.submit.login.form') }}" method="POST">
                                     @csrf
@@ -38,6 +39,9 @@
                                                     name="email"
                                                 />
                                             </div>
+                                            @error('email')
+                                            <div class="error" style="color: #c54f4f;">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="form-group">
@@ -48,6 +52,9 @@
                                                     name="password"
                                                 />
                                             </div>
+                                            @error('password')
+                                            <div class="error" style="color: #c54f4f;">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                         <div class="col-lg-12">
                                             <button
@@ -59,6 +66,7 @@
                                         </div>
                                     </div>
                                 </form>
+
                                 <div class="bottom">
                                     <p>
                                         Are You New Member?

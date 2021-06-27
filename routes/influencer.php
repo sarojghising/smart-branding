@@ -16,14 +16,13 @@ Route::group(['prefix' => 'influencer', 'as' => 'influencer.'], function () {
 
     Route::middleware('guest:influencer')->group(function () {
 
-        Route::match(['get','post'],'influencer-register', [AuthController::class, 'influencerRegister'])->name('register.form');
+        Route::get('influencer-register', [AuthController::class, 'influencerRegister'])->name('register.form');
+
+        Route::post('influencer-register', [AuthController::class, 'influencerRegisterSubmit'])->name('register.form.submit');
 
         Route::get('/influencer-login', [AuthController::class, 'influencerLogin'])->name('login.form');
 
         Route::post('/influencer-login', [AuthController::class, 'authenticate'])->name('submit.login.form');
-
-
-
 
     });
 

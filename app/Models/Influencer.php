@@ -21,6 +21,9 @@ class Influencer extends Authenticatable
         'email',
         'password',
         'mobile_no',
+        'facebook_followers',
+        'instagram_followers'
+
     ];
 
     /**

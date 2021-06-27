@@ -26,10 +26,23 @@
     <link rel="stylesheet" href="{{ asset('frontend/template/assets/css/animate.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('frontend/template/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/template/assets/css/custom.css') }}">
 
     <link rel="stylesheet" href="{{ asset('frontend/template/assets/css/responsive.css') }}">
     <title>@yield('title')</title>
     <link rel="icon" type="image/png" href="{{ asset('frontend/template/assets/img/favicon.png') }}">
+    <style>
+        .main-nav nav {
+            padding-left: 0;
+            padding-right: 0;
+            /* margin-bottom: 2.8rem; */
+            padding: 10px 20px;
+            /* margin: 10px -10px; */
+            /* margin-bottom: -23px; */
+            margin: -21px -23px !important;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -48,7 +61,7 @@
         </div>
     </div>
 
-     @yield('main-content')
+    @yield('main-content')
 
     <div class="go-top">
         <i class='bx bx-up-arrow'></i>
@@ -58,30 +71,30 @@
 
     <script data-cfasync="false"
         src="https://templates.hibootstrap.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="{{ asset('frontend/template/assets/js/jquery-3.5.1.min.js')  }}"></script>
-    <script src="{{ asset('frontend/template/assets/js/popper.min.js')  }}"></script>
-    <script src="{{ asset('frontend/template/assets/js/bootstrap.min.js')  }}"></script>
+    <script src="{{ asset('frontend/template/assets/js/jquery-3.5.1.min.js') }}"></script>
+    <script src="{{ asset('frontend/template/assets/js/popper.min.js') }}"></script>
+    <script src="{{ asset('frontend/template/assets/js/bootstrap.min.js') }}"></script>
 
-    <script src="{{ asset('frontend/template/assets/js/form-validator.min.js')  }}"></script>
+    <script src="{{ asset('frontend/template/assets/js/form-validator.min.js') }}"></script>
 
-    <script src="{{ asset('frontend/template/assets/js/contact-form-script.js')  }}"></script>
+    <script src="{{ asset('frontend/template/assets/js/contact-form-script.js') }}"></script>
 
-    <script src="{{ asset('frontend/template/assets/js/jquery.ajaxchimp.min.js')  }}"></script>
+    <script src="{{ asset('frontend/template/assets/js/jquery.ajaxchimp.min.js') }}"></script>
 
-    <script src="{{ asset('frontend/template/assets/js/jquery.meanmenu.js')  }}"></script>
+    <script src="{{ asset('frontend/template/assets/js/jquery.meanmenu.js') }}"></script>
 
-    <script src="{{ asset('frontend/template/assets/js/jquery.magnific-popup.min.js')  }}"></script>
+    <script src="{{ asset('frontend/template/assets/js/jquery.magnific-popup.min.js') }}"></script>
 
-    <script src="{{ asset('frontend/template/assets/js/odometer.min.js')  }}"></script>
-    <script src="{{ asset('frontend/template/assets/js/jquery.appear.js')  }}"></script>
+    <script src="{{ asset('frontend/template/assets/js/odometer.min.js') }}"></script>
+    <script src="{{ asset('frontend/template/assets/js/jquery.appear.js') }}"></script>
 
-    <script src="{{ asset('frontend/template/assets/js/owl.carousel.min.js')  }}"></script>
+    <script src="{{ asset('frontend/template/assets/js/owl.carousel.min.js') }}"></script>
 
-    <script src="{{ asset('frontend/template/assets/js/thumb-slide.js')  }}"></script>
+    <script src="{{ asset('frontend/template/assets/js/thumb-slide.js') }}"></script>
 
-    <script src="{{ asset('frontend/template/assets/js/wow.min.js')  }}"></script>
+    <script src="{{ asset('frontend/template/assets/js/wow.min.js') }}"></script>
 
-    <script src="{{ asset('frontend/template/assets/js/custom.js')  }}"></script>
+    <script src="{{ asset('frontend/template/assets/js/custom.js') }}"></script>
 </body>
 
 <!-- Mirrored from templates.hibootstrap.com/dilx/default/digital.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 May 2021 10:11:00 GMT -->
