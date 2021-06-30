@@ -72,7 +72,14 @@
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
                                     <td>
-                                        <img src="{{ $post_selection->influencer->image }}" alt="image" width="50">
+                                        @if (file_exists(public_path() . '/storage/images/profile/' . $post_selection->influencer->image) && $post_selection->influencer->image != null)
+                                        <img src="{{ asset('storage/images/profile/' .  $post_selection->influencer->image) }}"
+                                            alt="image" width="50">
+                                    @else
+                                    <img src="{{ $post_selection->influencer->image }}" alt="image" width="50">
+
+                                    @endif
+                                        
                                     </td>
                                     <td>
                                         {{ $post_selection->influencer->name }}

@@ -27,7 +27,7 @@
                                     <h2>Influencer Register</h2>
                                     @include('notification.flashMessage')
                                 </div>
-                                <form action="{{ route('influencer.register.form.submit') }}" method="POST">
+                                <form action="{{ route('influencer.register.form.submit') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row">
                                         <div class="col-lg-12">
@@ -44,13 +44,14 @@
                                             <div class="error" style="color: #c54f4f;">{{ $message }}</div>
                                             @enderror
                                         </div>
+                                        {{ $errors }}
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <input
 
-                                                    type="url"
+                                                    type="text"
                                                     class="form-control"
-                                                    placeholder="Enter your Facebook URL"
+                                                    placeholder="Enter your Facebook Followers e.g. 28.51k"
                                                     name="facebook_followers"
                                                 />
                                             </div>
@@ -62,9 +63,9 @@
                                             <div class="form-group">
                                                 <input
 
-                                                    type="url"
+                                                    type="text"
                                                     class="form-control"
-                                                    placeholder="Enter your Instagram URL"
+                                                    placeholder="Enter your Instagram Followers 25.51k"
                                                     name="instagram_followers"
                                                 />
                                             </div>
@@ -72,6 +73,39 @@
                                             <div class="error" style="color: #c54f4f;">{{ $message }}</div>
                                             @enderror
                                         </div>
+
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <input
+
+                                                    type="text"
+                                                    class="form-control"
+                                                    placeholder="Enter your Impression e.g. 16k - 29k"
+                                                    name="impression"
+                                                />
+                                            </div>
+                                            @error('impression')
+                                            <div class="error" style="color: #c54f4f;">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <input
+
+                                                    type="number"
+                                                    class="form-control"
+                                                    placeholder="Enter your Rating Number e.g. 1-20"
+                                                    name="rate"
+                                                    min="1"
+                                                    max="20"
+                                                />
+                                            </div>
+                                            @error('rate')
+                                            <div class="error" style="color: #c54f4f;">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <input
@@ -97,6 +131,20 @@
                                                 />
                                             </div>
                                             @error('password')
+                                            <div class="error" style="color: #c54f4f;">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <input
+                                                    type="file"
+                                                    class="form-control"
+                                                    name="image"
+                                                    placeholder="Choose Profile pic"
+                                                />
+                                            </div>
+                                            @error('image')
                                             <div class="error" style="color: #c54f4f;">{{ $message }}</div>
                                             @enderror
                                         </div>

@@ -110,7 +110,14 @@
                                 @isset($review)
                                 <tr class="gradeX">
                                     <td>
-                                       <img src="{{ $review->influencer->image }}" alt="image" width="100">
+                                        
+                                        @if (file_exists(public_path() . '/storage/images/profile/' . $review->influencer->image) && $review->influencer->image != null)
+                                        <img src="{{ asset('storage/images/profile/' . $review->influencer->image) }}"
+                                            alt="image" width="50">
+                                    @else
+                                        <img src="{{ $review->influencer->image }}" alt="image" width="50">
+
+                                    @endif
                                     </td>
                                     <td>
                                         {{ $review->influencer->name }}

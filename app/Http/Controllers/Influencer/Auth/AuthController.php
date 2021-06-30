@@ -5,12 +5,14 @@ namespace App\Http\Controllers\Influencer\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\Influencer;
 use App\Repositories\Credentials\LoginRepository;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
+
 
     /**
      * LoginController constructor.
@@ -36,6 +38,9 @@ class AuthController extends Controller
 
         Validator::make($request->all(), [
             'name' => 'required',
+            'image' => 'required|image|mimes:png,jpg,jpeg',
+            'impression' => 'required',
+            'rate' => 'required|numeric',
             'instagram_followers' => 'required',
             'facebook_followers' => 'required',
             'email' => 'required|unique:influencers,email|email',
@@ -44,8 +49,12 @@ class AuthController extends Controller
 
 
 
-        $successs = Influencer::create($request->only(['name', 'email', 'instagram_followers', 'facebook_followers'])
-            + ['password' => Hash::make($request->password)]);
+
+        $successs = Influencer::create($request->only(['name', 'email', 'instagram_followers', 'facebook_followers', 'impression', 'rate'])
+            + [
+                'password' => Hash::make($request->password),
+                'image' => $this->uploadImage($request->file('image'), 'influencer', '/app/public/images/profile/')
+            ]);
 
 
         return $successs ? redirect()->route('influencer.login.form')->with('success', 'Influencer registered successfully') :
@@ -91,5 +100,22 @@ class AuthController extends Controller
         $influencer->setGuards('influencer');
 
         return $influencer->logout();
+    }
+
+    /**
+     * @param $image
+     * @param $imageFieldName
+     * @param $path
+     * @return string
+     */
+    public function uploadImage($image, $imageFieldName, $path)
+    {
+        $extension = $image->getClientOriginalExtension();
+
+        $filename = $imageFieldName . '-' . Carbon::now()->timestamp . '.' . $extension;
+
+        $image->move(storage_path($path), $filename);
+
+        return $filename;
     }
 }
