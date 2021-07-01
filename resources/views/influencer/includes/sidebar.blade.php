@@ -3,7 +3,7 @@
         <ul class="nav metismenu" id="side-menu">
             <li class="nav-header">
                 <div class="dropdown profile-element">
-                    <img alt="image" class="rounded-circle" src="{{ asset('dashboard/img/profile_small.jpg') }}" />
+                    <img alt="image" class="rounded-circle" src="{{ asset('dashboard/img/profile.jpeg') }}" width="50" />
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <span class="block m-t-xs font-bold">
                             @if(Auth::guard('influencer')->check())

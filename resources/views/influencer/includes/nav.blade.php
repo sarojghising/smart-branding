@@ -21,7 +21,7 @@
                 <li>
                     <div class="dropdown-messages-box">
                         <a class="dropdown-item float-left" href="profile.html">
-                            <img alt="image" class="rounded-circle" src="{{ asset('dashboard/img/a7.jpg') }}">
+                            <img alt="image" class="rounded-circle" src="{{ asset('dashboard/img/profile.jpeg') }}">
                         </a>
                         <div>
                             <small class="float-right">46h ago</small>
@@ -35,7 +35,7 @@
                 <li>
                     <div class="dropdown-messages-box">
                         <a class="dropdown-item float-left" href="profile.html">
-                            <img alt="image" class="rounded-circle" src="{{ asset('dashboard/img/a4.jpg') }}">
+                            <img alt="image" class="rounded-circle" src="{{ asset('dashboard/img/profile.jpeg') }}">
                         </a>
                         <div>
                             <small class="float-right text-navy">5h ago</small>
