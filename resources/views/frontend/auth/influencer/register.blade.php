@@ -44,7 +44,7 @@
                                             <div class="error" style="color: #c54f4f;">{{ $message }}</div>
                                             @enderror
                                         </div>
-                                        {{ $errors }}
+                                        {{-- {{ $errors }} --}}
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <input
